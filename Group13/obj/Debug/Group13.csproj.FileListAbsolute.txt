@@ -1,0 +1,15 @@
+C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\Group13.exe.config
+C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\Group13.exe
+C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\Group13.pdb
+C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.Form1.resources
+C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.Properties.Resources.resources
+C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.csproj.GenerateResource.cache
+C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.exe
+C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.pdb
+C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\NetToolKit.dll
+C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\SKCLNET.dll
+C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\SymbolFactoryDotNet.dll
+C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\SymbolFactoryNetEngine.dll
+C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.csproj.CopyComplete
