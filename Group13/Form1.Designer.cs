@@ -31,6 +31,11 @@ namespace Group13
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnConnect = new System.Windows.Forms.Button();
             this.cbCom = new System.Windows.Forms.ComboBox();
@@ -48,9 +53,7 @@ namespace Group13
             this.btnLamp1 = new System.Windows.Forms.Button();
             this.btnLamp2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.standardControl2 = new SymbolFactoryDotNet.StandardControl();
             this.standardControl1 = new SymbolFactoryDotNet.StandardControl();
-            this.button7 = new System.Windows.Forms.Button();
             this.btn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
@@ -61,6 +64,12 @@ namespace Group13
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.standardControl2 = new SymbolFactoryDotNet.StandardControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,14 +78,17 @@ namespace Group13
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.standardControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.standardControl1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.standardControl2)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnConnect);
             this.groupBox1.Controls.Add(this.cbCom);
@@ -86,7 +98,7 @@ namespace Group13
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(345, 125);
+            this.groupBox1.Size = new System.Drawing.Size(344, 111);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cài đặt ";
@@ -94,22 +106,23 @@ namespace Group13
             // 
             // btnConnect
             // 
+            this.btnConnect.BackColor = System.Drawing.Color.White;
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConnect.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.Location = new System.Drawing.Point(213, 51);
+            this.btnConnect.Location = new System.Drawing.Point(209, 41);
             this.btnConnect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(116, 30);
             this.btnConnect.TabIndex = 14;
             this.btnConnect.Text = "CONNECT";
-            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // cbCom
             // 
             this.cbCom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCom.FormattingEnabled = true;
-            this.cbCom.Location = new System.Drawing.Point(106, 36);
+            this.cbCom.Location = new System.Drawing.Point(102, 26);
             this.cbCom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCom.Name = "cbCom";
             this.cbCom.Size = new System.Drawing.Size(93, 28);
@@ -119,7 +132,7 @@ namespace Group13
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 76);
+            this.label2.Location = new System.Drawing.Point(20, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 19);
@@ -130,7 +143,7 @@ namespace Group13
             // 
             this.cbBauDrate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBauDrate.FormattingEnabled = true;
-            this.cbBauDrate.Location = new System.Drawing.Point(106, 73);
+            this.cbBauDrate.Location = new System.Drawing.Point(102, 63);
             this.cbBauDrate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbBauDrate.Name = "cbBauDrate";
             this.cbBauDrate.Size = new System.Drawing.Size(93, 28);
@@ -139,7 +152,7 @@ namespace Group13
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Group13.Properties.Resources.den2;
-            this.pictureBox1.Location = new System.Drawing.Point(448, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(434, 44);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 83);
@@ -174,7 +187,7 @@ namespace Group13
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(172, 44);
+            this.pictureBox3.Location = new System.Drawing.Point(158, 44);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(77, 83);
@@ -185,7 +198,7 @@ namespace Group13
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(316, 44);
+            this.pictureBox4.Location = new System.Drawing.Point(302, 44);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(77, 83);
@@ -228,7 +241,7 @@ namespace Group13
             // 
             this.btnLamp4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLamp4.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamp4.Location = new System.Drawing.Point(448, 161);
+            this.btnLamp4.Location = new System.Drawing.Point(434, 161);
             this.btnLamp4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLamp4.Name = "btnLamp4";
             this.btnLamp4.Size = new System.Drawing.Size(77, 39);
@@ -241,7 +254,7 @@ namespace Group13
             // 
             this.btnLamp3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLamp3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamp3.Location = new System.Drawing.Point(316, 161);
+            this.btnLamp3.Location = new System.Drawing.Point(302, 161);
             this.btnLamp3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLamp3.Name = "btnLamp3";
             this.btnLamp3.Size = new System.Drawing.Size(77, 39);
@@ -267,7 +280,7 @@ namespace Group13
             // 
             this.btnLamp2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLamp2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamp2.Location = new System.Drawing.Point(172, 161);
+            this.btnLamp2.Location = new System.Drawing.Point(158, 161);
             this.btnLamp2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLamp2.Name = "btnLamp2";
             this.btnLamp2.Size = new System.Drawing.Size(77, 39);
@@ -278,38 +291,19 @@ namespace Group13
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Info;
             this.groupBox3.Controls.Add(this.standardControl2);
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.standardControl1);
-            this.groupBox3.Controls.Add(this.button7);
             this.groupBox3.Controls.Add(this.btn);
-            this.groupBox3.Location = new System.Drawing.Point(436, 77);
+            this.groupBox3.Location = new System.Drawing.Point(400, 77);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(258, 125);
+            this.groupBox3.Size = new System.Drawing.Size(253, 111);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chế độ điều khiển";
-            // 
-            // standardControl2
-            // 
-            this.standardControl2.AnalogIntValue1 = ((short)(0));
-            this.standardControl2.AnalogValue1 = 0D;
-            this.standardControl2.AnimationMode = SymbolFactoryNetEngine.AnimationModeOptions.DiscreteColorFill;
-            this.standardControl2.BackColor = System.Drawing.Color.Transparent;
-            this.standardControl2.BackStyle = SymbolFactoryNetEngine.BackStyleOptions.Transparent;
-            this.standardControl2.BandsCollection.Add(new SymbolFactoryNetEngine.Band(90D, 90, false, SymbolFactoryNetEngine.BandStyleOptions.Original, System.Drawing.Color.Red, "Band1"));
-            this.standardControl2.BandsCollection.Add(new SymbolFactoryNetEngine.Band(0D, 0, false, SymbolFactoryNetEngine.BandStyleOptions.Shaded, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(64))))), "Band2"));
-            this.standardControl2.BlinkColor = System.Drawing.Color.Red;
-            this.standardControl2.Category = "1Btn.cat2";
-            this.standardControl2.DebugData = new SymbolFactoryDotNet.DebugClass(resources.GetString("standardControl2.DebugData"));
-            this.standardControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.standardControl2.Location = new System.Drawing.Point(115, 64);
-            this.standardControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.standardControl2.Name = "standardControl2";
-            this.standardControl2.Size = new System.Drawing.Size(40, 56);
-            this.standardControl2.SymbolHandle = ((long)(703557272));
-            this.standardControl2.TabIndex = 14;
             // 
             // standardControl1
             // 
@@ -324,37 +318,26 @@ namespace Group13
             this.standardControl1.Category = "1Btn.cat2";
             this.standardControl1.DebugData = new SymbolFactoryDotNet.DebugClass(resources.GetString("standardControl1.DebugData"));
             this.standardControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.standardControl1.Location = new System.Drawing.Point(115, 8);
+            this.standardControl1.Location = new System.Drawing.Point(201, 17);
             this.standardControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.standardControl1.Name = "standardControl1";
-            this.standardControl1.Size = new System.Drawing.Size(40, 56);
+            this.standardControl1.Size = new System.Drawing.Size(30, 42);
             this.standardControl1.SymbolHandle = ((long)(703557272));
             this.standardControl1.TabIndex = 13;
             this.standardControl1.Load += new System.EventHandler(this.standardControl1_Load);
             // 
-            // button7
-            // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(4, 72);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(77, 39);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "MAN";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // btn
             // 
+            this.btn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.Location = new System.Drawing.Point(4, 17);
+            this.btn.Font = new System.Drawing.Font("Calibri", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.Location = new System.Drawing.Point(10, 22);
             this.btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(77, 39);
+            this.btn.Size = new System.Drawing.Size(151, 33);
             this.btn.TabIndex = 11;
-            this.btn.Text = "AUTO";
-            this.btn.UseVisualStyleBackColor = true;
+            this.btn.Text = "Chế độ thủ công";
+            this.btn.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
@@ -375,10 +358,10 @@ namespace Group13
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox5.BackColor = System.Drawing.SystemColors.Info;
             this.groupBox5.Controls.Add(this.lbDate);
             this.groupBox5.Controls.Add(this.lbTime);
-            this.groupBox5.Location = new System.Drawing.Point(754, 81);
+            this.groupBox5.Location = new System.Drawing.Point(747, 79);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(214, 69);
             this.groupBox5.TabIndex = 9;
@@ -411,7 +394,7 @@ namespace Group13
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(259, 13);
+            this.label3.Location = new System.Drawing.Point(317, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(466, 23);
             this.label3.TabIndex = 10;
@@ -422,7 +405,7 @@ namespace Group13
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 11.78182F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(437, 37);
+            this.label4.Location = new System.Drawing.Point(495, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 23);
             this.label4.TabIndex = 11;
@@ -432,18 +415,109 @@ namespace Group13
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 41);
+            this.label1.Location = new System.Drawing.Point(20, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 19);
             this.label1.TabIndex = 15;
             this.label1.Text = "COM";
             // 
+            // standardControl2
+            // 
+            this.standardControl2.AnalogIntValue1 = ((short)(0));
+            this.standardControl2.AnalogValue1 = 0D;
+            this.standardControl2.AnimationMode = SymbolFactoryNetEngine.AnimationModeOptions.DiscreteColorFill;
+            this.standardControl2.BackColor = System.Drawing.Color.Transparent;
+            this.standardControl2.BackStyle = SymbolFactoryNetEngine.BackStyleOptions.Transparent;
+            this.standardControl2.BandsCollection.Add(new SymbolFactoryNetEngine.Band(90D, 90, false, SymbolFactoryNetEngine.BandStyleOptions.Original, System.Drawing.Color.Red, "Band1"));
+            this.standardControl2.BandsCollection.Add(new SymbolFactoryNetEngine.Band(0D, 0, false, SymbolFactoryNetEngine.BandStyleOptions.Shaded, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(64))))), "Band2"));
+            this.standardControl2.BlinkColor = System.Drawing.Color.Red;
+            this.standardControl2.Category = "1Btn.cat2";
+            this.standardControl2.DebugData = new SymbolFactoryDotNet.DebugClass(resources.GetString("standardControl2.DebugData"));
+            this.standardControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.standardControl2.Location = new System.Drawing.Point(201, 59);
+            this.standardControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.standardControl2.Name = "standardControl2";
+            this.standardControl2.Size = new System.Drawing.Size(30, 42);
+            this.standardControl2.SymbolHandle = ((long)(703557272));
+            this.standardControl2.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Calibri", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(10, 63);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 33);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Chế độ hẹn giờ";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(747, 169);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(370, 56);
+            this.panel1.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 19);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Nhiệt độ: ... °C";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 9.818182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(246, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 19);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Độ ẩm: ... %RH";
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(747, 231);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Nhiệt độ";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Độ ẩm";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(370, 219);
+            this.chart1.TabIndex = 13;
+            this.chart1.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Nhiệt độ - Độ ẩm";
+            this.chart1.Titles.Add(title1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 500);
+            this.ClientSize = new System.Drawing.Size(1132, 502);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox5);
@@ -464,11 +538,14 @@ namespace Group13
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.standardControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.standardControl1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.standardControl2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,9 +565,7 @@ namespace Group13
         private System.Windows.Forms.Button btnLamp2;
         private System.Windows.Forms.GroupBox groupBox3;
         private SymbolFactoryDotNet.StandardControl standardControl1;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btn;
-        private SymbolFactoryDotNet.StandardControl standardControl2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbBauDrate;
         private System.Windows.Forms.Label label2;
@@ -505,6 +580,12 @@ namespace Group13
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private SymbolFactoryDotNet.StandardControl standardControl2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

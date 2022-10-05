@@ -17,7 +17,7 @@ namespace Group13
         {
             InitializeComponent();
         }
-        string[] Baud = { "1", "2", "4", "8", "9600" };
+        string[] Baud = { "300", "600", "1200", "2400", "4800", "9600", "14400", "19200", "28800", "38400"};
         private void Form1_Load(object sender, EventArgs e)
         {
             string[] nameport = SerialPort.GetPortNames();
