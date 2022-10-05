@@ -13,3 +13,18 @@ C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\SKCLNET.dll
 C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\SymbolFactoryDotNet.dll
 C:\Users\DELL\source\repos\Group13\Group13\bin\Debug\SymbolFactoryNetEngine.dll
 C:\Users\DELL\source\repos\Group13\Group13\obj\Debug\Group13.csproj.CopyComplete
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\bin\Debug\Group13.exe.config
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\bin\Debug\Group13.exe
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\bin\Debug\Group13.pdb
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\bin\Debug\NetToolKit.dll
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\bin\Debug\SKCLNET.dll
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\bin\Debug\SymbolFactoryDotNet.dll
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\bin\Debug\SymbolFactoryNetEngine.dll
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\obj\Debug\Group13.csproj.AssemblyReference.cache
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\obj\Debug\Group13.Form1.resources
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\obj\Debug\Group13.Properties.Resources.resources
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\obj\Debug\Group13.csproj.GenerateResource.cache
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\obj\Debug\Group13.csproj.CoreCompileInputs.cache
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\obj\Debug\Group13.csproj.CopyComplete
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\obj\Debug\Group13.exe
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Dieu_khien_thiet_bi_trong_nha\Giao dien may tinh\Group13\obj\Debug\Group13.pdb

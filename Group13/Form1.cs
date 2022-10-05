@@ -23,6 +23,7 @@ namespace Group13
             string[] nameport = SerialPort.GetPortNames();
             cbCom.Items.AddRange(nameport);
             cbBauDrate.Items.AddRange(Baud);
+            timer1.Enabled = true;
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -210,6 +211,12 @@ namespace Group13
             {
                 MessageBox.Show("Loi");
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = DateTime.Now.ToLongTimeString();
+            lbDate.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
