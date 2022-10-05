@@ -38,7 +38,6 @@ namespace Group13
             this.cbBauDrate = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnArch = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -55,6 +54,7 @@ namespace Group13
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.btnLamp4 = new System.Windows.Forms.Button();
+            this.btnArch = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -142,18 +142,6 @@ namespace Group13
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnArch
-            // 
-            this.btnArch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnArch.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArch.Location = new System.Drawing.Point(29, 198);
-            this.btnArch.Name = "btnArch";
-            this.btnArch.Size = new System.Drawing.Size(103, 48);
-            this.btnArch.TabIndex = 1;
-            this.btnArch.Text = "ON";
-            this.btnArch.UseVisualStyleBackColor = true;
-            this.btnArch.Click += new System.EventHandler(this.btnArch_Click);
             // 
             // pictureBox2
             // 
@@ -325,8 +313,8 @@ namespace Group13
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.pictureBox5);
             this.groupBox4.Controls.Add(this.btnArch);
+            this.groupBox4.Controls.Add(this.pictureBox5);
             this.groupBox4.Location = new System.Drawing.Point(12, 225);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(167, 277);
@@ -344,7 +332,19 @@ namespace Group13
             this.btnLamp4.TabIndex = 10;
             this.btnLamp4.Text = "ON";
             this.btnLamp4.UseVisualStyleBackColor = true;
-            this.btnLamp4.Click += new System.EventHandler(this.btnLamp4_Click_1);
+            this.btnLamp4.Click += new System.EventHandler(this.btnLamp4_Click);
+            // 
+            // btnArch
+            // 
+            this.btnArch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnArch.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArch.Location = new System.Drawing.Point(29, 198);
+            this.btnArch.Name = "btnArch";
+            this.btnArch.Size = new System.Drawing.Size(103, 48);
+            this.btnArch.TabIndex = 11;
+            this.btnArch.Text = "ON";
+            this.btnArch.UseVisualStyleBackColor = true;
+            this.btnArch.Click += new System.EventHandler(this.btnArch_Click);
             // 
             // Form1
             // 
@@ -377,7 +377,6 @@ namespace Group13
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnArch;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -399,6 +398,7 @@ namespace Group13
         private System.Windows.Forms.Button btnConnect;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Button btnLamp4;
+        private System.Windows.Forms.Button btnArch;
     }
 }
 

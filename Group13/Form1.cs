@@ -49,21 +49,7 @@ namespace Group13
         {
 
         }
-        bool Lamp1 = true;
-        bool Lamp2 = true;
-        bool Lamp3 = true;
-        bool Lamp4 = true;
-        bool Arch = true;
-        private void btnLamp4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void btnConnect_Click(object sender, EventArgs e)
         {
             try
@@ -92,29 +78,11 @@ namespace Group13
             }
         }
 
-        private void btnArch_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (Arch == true)
-                {
-                    serialPort1.Write("j");
-                    btnArch.Text = "ON";
-                    Arch = false;
-                }
-                else
-                {
-                    serialPort1.Write("k");
-                    btnArch.Text = "OFF";
-                    Arch = true;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Loi");
-            }
-        }
-        
+        bool Lamp1 = true;
+        bool Lamp2 = true;
+        bool Lamp3 = true;
+        bool Lamp4 = true;
+        bool Arch = true;
         private void btnLamp1_Click(object sender, EventArgs e)
         {
             try
@@ -136,11 +104,6 @@ namespace Group13
             {
                 MessageBox.Show("Loi");
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            serialPort1.Write("1");
         }
 
         private void btnLamp2_Click(object sender, EventArgs e)
@@ -189,7 +152,7 @@ namespace Group13
             }
         }
 
-        private void btnLamp4_Click_1(object sender, EventArgs e)
+        private void btnLamp4_Click(object sender, EventArgs e)
         {
             try
             {
@@ -204,6 +167,29 @@ namespace Group13
                     serialPort1.Write("h");
                     btnLamp4.Text = "OFF";
                     Lamp4 = true;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+        }
+
+        private void btnArch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Arch == true)
+                {
+                    serialPort1.Write("j");
+                    btnArch.Text = "ON";
+                    Arch = false;
+                }
+                else
+                {
+                    serialPort1.Write("k");
+                    btnArch.Text = "OFF";
+                    Arch = true;
                 }
             }
             catch
