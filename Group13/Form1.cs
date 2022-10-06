@@ -17,12 +17,17 @@ namespace Group13
         {
             InitializeComponent();
         }
-        string[] Baud = { "1", "2", "4", "8", "9600" };
+        string[] Baud = { "300", "600", "1200", "2400", "4800", "9600", "14400", "19200", "28800", "38400" };
         private void Form1_Load(object sender, EventArgs e)
         {
             string[] nameport = SerialPort.GetPortNames();
             cbCom.Items.AddRange(nameport);
             cbBauDrate.Items.AddRange(Baud);
+
+            timer1.Enabled = true;
+
+            chart1.Series["Nhiet do"].Points.AddXY(1, 1);
+            chart1.Series["Do am"].Points.AddXY(1, 1);
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -63,13 +68,27 @@ namespace Group13
                 {
                     serialPort1.Close();
                     btnConnect.Text = "CONNECT";
+
+                    chart1.Series["Nhiet do"].Points.Clear();
+                    chart1.Series["Do am"].Points.Clear();
+
+                    lbTemp.Text = string.Format("Nhiệt độ = ... °C");
+                    lbHum.Text = string.Format("Độ ẩm = ... %RH");
+
+                    MessageBox.Show("Disconnected", "THONG BAO");
                 }
                 else
                 {
                     serialPort1.PortName = cbCom.Text;
                     serialPort1.BaudRate = int.Parse(cbBauDrate.Text);
                     serialPort1.Open();
+
+                    chart1.Series["Nhiet do"].Points.Clear();
+                    chart1.Series["Do am"].Points.Clear();
+
                     btnConnect.Text = "DISCONNECT";
+
+                    MessageBox.Show("Success Connected", "THONG BAO");
                 }
             }
             catch(Exception ex)
@@ -83,6 +102,7 @@ namespace Group13
         bool Lamp3 = true;
         bool Lamp4 = true;
         bool Arch = true;
+
         private void btnLamp1_Click(object sender, EventArgs e)
         {
             try
@@ -195,6 +215,64 @@ namespace Group13
             catch
             {
                 MessageBox.Show("Loi");
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = DateTime.Now.ToLongTimeString();
+            lbDate.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            string dataIn = serialPort1.ReadTo("\n");
+            Data_Parsing(dataIn);
+            this.BeginInvoke(new EventHandler(Show_Data));
+         }
+
+        private void Show_Data(object sender, EventArgs e)
+        {
+            if(updateData == true)
+            {
+                lbTemp.Text = string.Format("Nhiệt độ = {0} °C", nhietdo.ToString());
+                lbHum.Text = string.Format("Độ ẩm = {0} %RH", doam.ToString());
+
+                chart1.Series["Nhiet do"].Points.Add(nhietdo);
+                chart1.Series["Do am"].Points.Add(doam);
+            }
+        }
+
+        double nhietdo = 0;
+        double doam = 0;
+        bool updateData = false;
+
+        private void Data_Parsing(string dataIn)
+        {
+            sbyte indexOf_startDataCharacter = (sbyte)dataIn.IndexOf("@");
+            sbyte indexOfA = (sbyte)dataIn.IndexOf("A");
+            sbyte indexOfB = (sbyte)dataIn.IndexOf("B");
+
+            if(indexOfA != -1 && indexOfB != -1 && indexOf_startDataCharacter != -1 )
+            {
+                try
+                {
+                    string str_nhietdo = dataIn.Substring(indexOf_startDataCharacter + 1, (indexOfA - indexOf_startDataCharacter) - 1);
+                    string str_doam = dataIn.Substring(indexOfA + 1, (indexOfB - indexOfA) - 1);
+
+                    nhietdo = Convert.ToDouble(str_nhietdo);
+                    doam = Convert.ToDouble(str_doam);
+
+                    updateData = true;
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            else
+            {
+                updateData = false;
             }
         }
     }

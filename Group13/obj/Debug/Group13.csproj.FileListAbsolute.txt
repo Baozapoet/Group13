@@ -28,3 +28,18 @@ D:\OneDrive - vnu.edu.vn\Desktop\Group13\Group13\obj\Debug\Group13.csproj.CoreCo
 D:\OneDrive - vnu.edu.vn\Desktop\Group13\Group13\obj\Debug\Group13.csproj.CopyComplete
 D:\OneDrive - vnu.edu.vn\Desktop\Group13\Group13\obj\Debug\Group13.exe
 D:\OneDrive - vnu.edu.vn\Desktop\Group13\Group13\obj\Debug\Group13.pdb
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\bin\Debug\Group13.exe.config
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\bin\Debug\Group13.exe
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\bin\Debug\Group13.pdb
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\bin\Debug\NetToolKit.dll
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\bin\Debug\SKCLNET.dll
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\bin\Debug\SymbolFactoryDotNet.dll
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\bin\Debug\SymbolFactoryNetEngine.dll
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\obj\Debug\Group13.csproj.AssemblyReference.cache
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\obj\Debug\Group13.Form1.resources
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\obj\Debug\Group13.Properties.Resources.resources
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\obj\Debug\Group13.csproj.GenerateResource.cache
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\obj\Debug\Group13.csproj.CoreCompileInputs.cache
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\obj\Debug\Group13.csproj.CopyComplete
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\obj\Debug\Group13.exe
+C:\Tai lieu\HKI 2022 - 2023\VI XU LY - VI DIEU KHIEN\Giua ky\Testt\Group13\obj\Debug\Group13.pdb
